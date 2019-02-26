@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login TP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById("register").style.display = "none";
+        document.getElementById("log").style.display = "none";
+    }
+</script>
+
+<div class="container" id="login">
+    <form class="form-horizontal" role="form">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username" class="col-sm-3 control-label">Username</label>
+            <div class="col-sm-9">
+                <input type="text" id="usernameL" placeholder="Username" class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">Password</label>
+            <div class="col-sm-9">
+                <input type="password" id="passwordL" placeholder="Password" class="form-control">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" id="showRegister">Create an account</button>
+        <button type="button" class="btn btn-primary btn-block" id="loginButton">Login</button>
+    </form>
+</div> <!-- ./Login -->
+
+<div class="container" id="register">
+    <form class="form-horizontal" role="form">
+        <h2>Registration</h2>
+        <div class="form-group">
+            <label for="username" class="col-sm-3 control-label">Username</label>
+            <div class="col-sm-9">
+                <input type="text" id="username" placeholder="First Name" class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="firstName" class="col-sm-3 control-label">First Name</label>
+            <div class="col-sm-9">
+                <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+            <div class="col-sm-9">
+                <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-3 control-label">Email* </label>
+            <div class="col-sm-9">
+                <input type="email" id="email" placeholder="Email" class="form-control" name= "email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">Password*</label>
+            <div class="col-sm-9">
+                <input type="password" id="password" placeholder="Password" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">Confirm Password*</label>
+            <div class="col-sm-9">
+                <input type="password" id="password" placeholder="Password" class="form-control">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" id="registerButton">Register</button>
+    </form> <!-- /form -->
+</div> <!-- ./Register -->
+
+<div class="" id="log">
+    <h1>Logs</h1>
+</div> <!-- ./Log -->
+
+</body>
+</html>
