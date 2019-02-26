@@ -17,6 +17,11 @@
     window.onload = function () {
         document.getElementById("register").style.display = "none";
         document.getElementById("log").style.display = "none";
+        $.get("http://iutbelfort.ltg-services.fr/getToken").done(function (result) {
+            let token = result["token"];
+            document.getElementById("token").value = token;
+            document.getElementById("tokenLog").value = token;
+        });
     }
 </script>
 
@@ -35,6 +40,7 @@
                 <input type="password" id="passwordL" placeholder="Password" class="form-control">
             </div>
         </div>
+        <input type="hidden" id="tokenLog">
         <button type="button" class="btn btn-primary btn-block" id="showRegister">Create an account</button>
         <button type="button" class="btn btn-primary btn-block" id="loginButton">Login</button>
     </form>
@@ -76,9 +82,10 @@
         <div class="form-group">
             <label for="password" class="col-sm-3 control-label">Confirm Password*</label>
             <div class="col-sm-9">
-                <input type="password" id="password" placeholder="Password" class="form-control">
+                <input type="password" id="password2" placeholder="Password" class="form-control">
             </div>
         </div>
+        <input type="hidden" id="token">
         <button type="button" class="btn btn-primary btn-block" id="registerButton">Register</button>
     </form> <!-- /form -->
 </div> <!-- ./Register -->
