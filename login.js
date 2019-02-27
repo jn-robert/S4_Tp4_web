@@ -27,6 +27,7 @@ $(document).ready(function () {
             if ($log === use) {
                 if ($pas === pass) {
                     document.getElementById("login").style.display = "none";
+                    afficheImages();
                     document.getElementById("log").style.display = "block";
                     return true
                 }
@@ -358,21 +359,15 @@ $(document).ready(function () {
         }];
     console.log(picture);
 
-    $.each(picture, function (key, value) {
-        $("<div>",
-            {html:"<div class='card'><img class='card-img-top' src="+value["link"]+"><div class='card-body'><h5 class='card-title'>"+value["title"]+"</h5><p class='card-text'>"+value["description"]+"</p><a href="+value["generator"]+"class='btn'>Read more</a></div></div>"}).appendTo("#news");
-    })
+    /*
+        $.each(picture, function (key, value) {
+            $('#news').append('<div id=maDiv class=card>',picture[0]['items'][key]['description'],'</div>');
+            })
+    */
 
-
-
-
-
-
-
-
-
-
-
-
-
+    function afficheImages() {
+        for (let i = 0; i < picture[0]['items'].length; i++) {
+            $('#news').append('<div id=maDiv class=card>', picture[0]['items'][i]['description'], '</div>');
+        }
+    }
 });
